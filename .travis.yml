@@ -1,0 +1,11 @@
+os: windows
+
+services:
+  - docker
+
+before_install:
+  - docker build -t travis-ci.test .
+  
+script:
+  - docker run --env BROWSER=chrome -it travis-ci.test
+  - docker run --env BROWSER=firefox -it travis-ci.test
