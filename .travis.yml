@@ -1,4 +1,4 @@
-language: powershell
+language: bash
 os: windows
 
 services:
