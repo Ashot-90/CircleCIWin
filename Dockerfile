@@ -11,7 +11,7 @@
 #   docker run --rm -v c:\dev\my-test-project:c:\cypress --env CYPRESS_BASE_URL=http://app:7071 cypress
 # Where 'app' is another container running via 'docker run --name app'
 
-FROM mcr.microsoft.com/windows:latest
+FROM mcr.microsoft.com/windows:20H2
 
 RUN mkdir -p /c/download ; cp -r ta_assignment /c/download/
 # Install NodeJS and Cypress
