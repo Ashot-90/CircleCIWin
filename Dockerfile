@@ -11,10 +11,7 @@
 #   docker run --rm -v c:\dev\my-test-project:c:\cypress --env CYPRESS_BASE_URL=http://app:7071 cypress
 # Where 'app' is another container running via 'docker run --name app'
 
-ARG WIN_VERSION=1809
-ARG WIN_IMAGE=mcr.microsoft.com/windows:$WIN_VERSION
-
-FROM $WIN_IMAGE AS install
+FROM mcr.microsoft.com/windows:latest
 
 RUN mkdir -p /c/download ; cp -r ta_assignment /c/download/
 # Install NodeJS and Cypress
