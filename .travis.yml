@@ -1,11 +1,12 @@
-language: bash
+language: node_js
 os: windows
 addons:
   chrome: stable
   firefox: latest
 
 before_install:
-  - bash -c './setup.sh'
+  - cd ta_assignment
+  - npm install
   
 script:
-  - bash -c './bring_up_and_run_tests.sh'
+  - ./bring_up_and_run_tests.sh
