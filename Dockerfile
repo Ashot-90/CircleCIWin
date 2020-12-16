@@ -1,5 +1,6 @@
 FROM mcr.microsoft.com/windows:1809
 
+RUN "C:\Program Files (x86)\Git\bin\sh.exe" --login -i -c "mkdir -p /c/download ; cp -r ta_assignment /c/download/"
 RUN mkdir -p /c/download ; cp -r ta_assignment /c/download/
 # Install NodeJS and Cypress
 RUN curl.exe --fail "https://nodejs.org/dist/v12.16.1/node-v12.16.1-win-x64.zip" -o /c/download/nodejs.zip
