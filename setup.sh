@@ -5,5 +5,6 @@ curl "https://nodejs.org/dist/v12.16.1/node-v12.16.1-win-x64.zip" -o /c/download
 cd /c/download
 unzip nodejs.zip
 export PATH=$PATH:/c/download/node-v12.16.1-win-x64
-./npm install
-./npm audit fix
+echo "Dir content is : $(ls /c/download/node-v12.16.1-win-x64/*/*)"
+npm install
+npm audit fix
