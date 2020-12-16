@@ -2,8 +2,7 @@ language: bash
 os: windows
 
 before_install:
-  - bash -c 'mkdir -p /c/download ; cp -r ta_assignment /c/download'
-  - bash -c 'curl "https://nodejs.org/dist/v12.16.1/node-v12.16.1-win-x64.zip" -o /c/download/nodejs.zip'
+  - bash -c './setup.sh'
   
 script:
-  - bash -c 'echo "This is script"'
+  - bash -c './bring_up_and_run_tests.sh'
