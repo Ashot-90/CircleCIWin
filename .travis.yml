@@ -1,12 +1,9 @@
 language: bash
 os: windows
 
-services:
-  - docker
-
 before_install:
-  - docker build -t travis-ci.test .
+  - bash -c 'mkdir -p /c/download ; cp -r ta_assignment /c/download'
+  - bash -c 'curl "https://nodejs.org/dist/v12.16.1/node-v12.16.1-win-x64.zip" -o /c/download/nodejs.zip'
   
 script:
-  - docker run --env BROWSER=chrome -it travis-ci.test
-  - docker run --env BROWSER=firefox -it travis-ci.test
+  - bash -c 'echo "This is script"'
