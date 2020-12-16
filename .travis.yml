@@ -1,5 +1,8 @@
 language: bash
 os: windows
+addons:
+  chrome: stable
+  firefox: latest
 
 before_install:
   - bash -c './setup.sh'
